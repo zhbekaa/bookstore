@@ -1,0 +1,172 @@
+
+@font-face {
+    font-family: "LibreFranklin";
+    src: url("../librefranklin/LibreFranklin[wght].ttf");
+}
+
+body {
+    background-color: #E3E4E0;
+    font-family: "LibreFranklin";
+    margin: 0 0 5% 0;
+}
+#topnav {
+    width: 100%;
+    background-color: #687A86;
+}
+header {
+    display: grid;
+    grid-template-columns: 100%;
+    top: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E3E4E0;
+    margin-top: 1%;
+    margin-bottom: 0;
+    top: 0;
+}
+h2 {
+    padding-left: 2%;
+}
+.icon {
+    display: none;
+    margin-top: 3%;
+    justify-content: center;
+    align-items: center;
+    background-color: #687A86;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    background-color: #687A86;
+    margin-top: 0;
+    height: 50px;
+}
+
+#navbar a {
+    color: #E3E4E0;
+    text-decoration: none;
+}
+
+#books-container {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    column-gap: 5%;
+    row-gap: 5%;
+    margin: 0 5% 0 5%;
+}
+
+.book-card {
+    display: flex;
+    height: 250px;
+}
+
+img {
+    height: 100%;
+    margin-right: 5%;
+}
+
+.btn-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bk-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.bk-right h3,
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.payBtn {
+    display: flex;
+    height: 40px;
+    width: 120px;
+    text-decoration: none;
+    color: #E3E4E0;
+    background-color: #687A86;
+    border: solid black 1px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#payBtn:hover {
+    background-color: #4e5c65;
+}
+#payment-container {
+    margin-left: 2%;
+}
+#card-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#msc-img {
+    margin-left: 20px;
+    height: 50px;
+}
+#successful {
+    margin-left: 2%;
+}
+label {
+    margin-right: 10px;
+}
+input {
+    border-radius: 5px;
+}
+#formResp {
+    color: red;
+    display: block;
+}
+@media (max-width: 950px) {
+    #books-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar.responsive {
+        padding-top: 5px;
+        display: flex;
+        height: 100px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    header {
+        grid-template-columns: 90% 10%;
+    }
+    #topnav {
+        padding-bottom: 1%;
+        margin-bottom: 5%;
+    }
+
+    .icon {
+        display: flex;
+    }
+
+    #books-container {
+        margin-top: 10px;
+        row-gap: 35%;
+    }
+}
